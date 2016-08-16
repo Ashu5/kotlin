@@ -45,6 +45,10 @@ class DeclarationResolver(
     fun resolveAnnotationsOnFiles(c: TopDownAnalysisContext, scopeProvider: FileScopeProvider) {
         val filesToScope = c.files.keysToMap { scopeProvider.getFileResolutionScope(it) }
         for ((file, fileScope) in filesToScope) {
+            if (file.annotationEntries.isEmpty() && file.danglingAnnotations.isEmpty()) {
+                continue
+            }
+
             annotationResolver.resolveAnnotationsWithArguments(fileScope, file.annotationEntries, trace)
             annotationResolver.resolveAnnotationsWithArguments(fileScope, file.danglingAnnotations, trace)
         }
