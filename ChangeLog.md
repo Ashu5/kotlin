@@ -238,7 +238,8 @@ Using 'this' as function argument in constructor of non-final class
 - [`KT-12896`](https://youtrack.jetbrains.com/issue/KT-12896) Fix "Step In" to inline functions for Android
 - [`KT-13269`](https://youtrack.jetbrains.com/issue/KT-13269) Make quick evaluate work on receiver in qualified expressions
 - [`KT-12641`](https://youtrack.jetbrains.com/issue/KT-12641) Unknown error on evaluate expression containing inline functions with complicated environment
-- [`KT-13163`](https://youtrack.jetbrains.com/issue/KT-13163) Fix exception when evaluating expression: Access is allowed from event dispatch thread only.
+- [`KT-13163`](https://youtrack.jetbrains.com/issue/KT-13163) Fix exception when evaluating expression: Access is allowed from event dispatch thread only
+- [`KT-13534`](https://youtrack.jetbrains.com/issue/KT-13534) Debugger doesn't step into 'for' body if there's inline function call in range expression
 
 ##### New features in debugger
 
